@@ -1,0 +1,11 @@
+-- 코드를 입력하세요
+SELECT TO_CHAR(DATETIME,'HH24') AS HOUR,
+COUNT(*) AS COUNT
+FROM ANIMAL_OUTS
+WHERE TO_CHAR(DATETIME,'HH24') BETWEEN 09 AND 19 
+GROUP BY TO_CHAR(DATETIME,'HH24')
+ORDER BY TO_CHAR(DATETIME,'HH24')
+
+--오라클은 문법상 WHERE 절이 그룹보다 먼저다
+--GROUP BY를 묶어준다음 해빙절을 썼는데 안되었다 WHY
+--오라클 문법에서 별칭쓸때엔 ''는 안되고 무조건 ""만 가능하다
