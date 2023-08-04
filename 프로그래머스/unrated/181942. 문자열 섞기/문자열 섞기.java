@@ -1,15 +1,13 @@
 class Solution {
     public String solution(String str1, String str2) {
         String answer = "";
-        
-        String strFrist[] = str1.split("");
-        String strTwo[] = str2.split("");
-        
-        for(int i=0; i < strFrist.length; i++ ){
-            answer += strFrist[i];
-            answer += strTwo[i];
+
+        for(int i = 0; i < str1.length(); i++){
+            answer+= str1.charAt(i); //split대신 이걸 사용
+            answer+= str2.charAt(i);
         }
-        
+
         return answer;
+
     }
 }
